@@ -1,73 +1,142 @@
-# Welcome to your Lovable project
+# Portfolio de Fabian Huervo De La Cruz
 
-## Project info
+## 📋 Descripción
 
-**URL**: https://lovable.dev/projects/36000797-9c45-42ed-8a6c-fb9efecfb159
+Portfolio personal desarrollado con React, TypeScript y Tailwind CSS. Este proyecto presenta mi experiencia profesional, proyectos destacados y habilidades técnicas de manera elegante y moderna.
 
-## How can I edit this code?
+## 🚀 Características
 
-There are several ways of editing your application.
+- **Diseño Responsivo**: Optimizado para dispositivos móviles, tablets y desktop
+- **Interfaz Moderna**: Utiliza componentes de shadcn/ui para una experiencia visual atractiva
+- **Navegación Suave**: Transiciones fluidas entre secciones
+- **Tema Oscuro**: Diseño elegante con fondo negro y acentos de color
+- **Componentes Reutilizables**: Arquitectura modular y escalable
 
-**Use Lovable**
+## 🛠️ Tecnologías Utilizadas
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/36000797-9c45-42ed-8a6c-fb9efecfb159) and start prompting.
+### Frontend
+- **React 18** - Biblioteca de interfaz de usuario
+- **TypeScript** - Tipado estático para mayor robustez
+- **Vite** - Herramienta de construcción rápida
+- **Tailwind CSS** - Framework de CSS utilitario
+- **shadcn/ui** - Componentes de UI modernos y accesibles
 
-Changes made via Lovable will be committed automatically to this repo.
+### Componentes UI
+- **Radix UI** - Componentes primitivos accesibles
+- **Lucide React** - Iconografía moderna
+- **React Router DOM** - Navegación entre páginas
+- **React Hook Form** - Manejo de formularios
+- **Zod** - Validación de esquemas
 
-**Use your preferred IDE**
+### Herramientas de Desarrollo
+- **ESLint** - Linting de código
+- **PostCSS** - Procesamiento de CSS
+- **Autoprefixer** - Compatibilidad entre navegadores
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📁 Estructura del Proyecto
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/          # Componentes reutilizables
+│   ├── ui/             # Componentes de UI base
+│   ├── Header.tsx      # Encabezado del sitio
+│   ├── Footer.tsx      # Pie de página
+│   ├── ExperienceSection.tsx  # Sección de experiencia
+│   └── ProjectsSection.tsx    # Sección de proyectos
+├── pages/              # Páginas de la aplicación
+│   ├── Index.tsx       # Página principal
+│   └── NotFound.tsx    # Página 404
+├── hooks/              # Hooks personalizados
+├── lib/                # Utilidades y configuraciones
+└── App.tsx             # Componente raíz
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Instalación y Ejecución
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerrequisitos
+- Node.js (versión 18 o superior)
+- npm o yarn
 
-**Use GitHub Codespaces**
+### Pasos de Instalación
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Clonar el repositorio**
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd fabian-huervo-portfolio
+   ```
 
-## What technologies are used for this project?
+2. **Instalar dependencias**
+   ```bash
+   npm install
+   ```
 
-This project is built with:
+3. **Ejecutar en modo desarrollo**
+   ```bash
+   npm run dev
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+4. **Abrir en el navegador**
+   ```
+   http://localhost:5173
+   ```
 
-## How can I deploy this project?
+### Scripts Disponibles
 
-Simply open [Lovable](https://lovable.dev/projects/36000797-9c45-42ed-8a6c-fb9efecfb159) and click on Share -> Publish.
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run build:dev` - Construye en modo desarrollo
+- `npm run lint` - Ejecuta el linter
+- `npm run preview` - Vista previa de la build de producción
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Personalización
 
-Yes, you can!
+### Colores y Temas
+El proyecto utiliza un esquema de colores personalizado con:
+- Fondo principal: Negro (`bg-black`)
+- Acentos: Naranja (`#ff6b35`, `#f7931e`)
+- Texto: Blanco (`text-white`)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Componentes
+Los componentes están organizados en:
+- **UI Base**: Componentes reutilizables en `src/components/ui/`
+- **Secciones**: Componentes específicos de página en `src/components/`
+- **Páginas**: Vistas principales en `src/pages/`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📱 Responsive Design
+
+El portfolio está optimizado para:
+- **Móviles**: 320px - 768px
+- **Tablets**: 768px - 1024px
+- **Desktop**: 1024px+
+
+## 🔧 Configuración de Desarrollo
+
+### ESLint
+Configurado con reglas estrictas para TypeScript y React.
+
+### Tailwind CSS
+Configurado con:
+- Tipografía personalizada
+- Animaciones CSS
+- Utilidades de diseño responsivo
+
+### Vite
+Configurado para:
+- Hot Module Replacement (HMR)
+- Optimización de builds
+- Soporte para TypeScript
+
+## 📄 Licencia
+
+Este proyecto es de uso personal y educativo.
+
+## 👨‍💻 Autor
+
+**Fabian Huervo**
+- Desarrollador Full Stack
+- Especializado en React, TypeScript y tecnologías modernas
+- Enfocado en crear experiencias de usuario excepcionales
+
+---
+
+*Desarrollado con ❤️ usando React, TypeScript y Tailwind CSS*
