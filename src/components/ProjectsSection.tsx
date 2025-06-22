@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Play } from "lucide-react";
 
 const projects = [
@@ -6,41 +5,11 @@ const projects = [
     title: "Aplicación de Horarios Escolares",
     subtitle: "MOBILE APPLICATION",
     description: "Sistema avanzado de generación automática de horarios escolares con algoritmos de optimización para la asignación eficiente de recursos educativos.",
-    technologies: ["React Native", "JavaScript", "SQL", "Algoritmos"],
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
-    demoUrl: "#",
-    githubUrl: "#",
+    technologies: ["React Native", "TypeScript", "Expo", "SQL", "Algoritmos"],
+    image: "https://api.microlink.io/?url=https://gestioncobaev.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
+    demoUrl: "https://gestioncobaev.vercel.app/",
+    githubUrl: "https://github.com/fabbiandlc/gestion",
     featured: true
-  },
-  {
-    title: "Sistema de Gestión ERP",
-    subtitle: "ENTERPRISE SOLUTION",
-    description: "Plataforma integral para la administración empresarial con módulos de inventario, proveedores y automatización de procesos críticos.",
-    technologies: ["SQL", "ERP Systems", "Business Intelligence"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false
-  },
-  {
-    title: "Infraestructura de Red",
-    subtitle: "NETWORK ARCHITECTURE",
-    description: "Diseño e implementación de infraestructura de red empresarial con servidores virtualizados y sistemas de seguridad CCTV.",
-    technologies: ["Networking", "Virtualization", "Windows Server", "Linux"],
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false
-  },
-  {
-    title: "Control de Activos",
-    subtitle: "ASSET MANAGEMENT",
-    description: "Sistema de gestión y control de activos tecnológicos con reportería avanzada y seguimiento en tiempo real.",
-    technologies: ["JavaScript", "Database Design", "Reporting"],
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop",
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false
   }
 ];
 

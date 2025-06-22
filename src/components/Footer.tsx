@@ -84,7 +84,6 @@ const Footer = () => {
             
             <div className="text-gray-500 text-sm text-center md:text-right">
               <p>© 2025 Todos los derechos reservados</p>
-              <p className="text-xs mt-1">Desarrollado con pasión por la tecnología</p>
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -20,7 +19,7 @@ const Index = () => {
         <Header />
         
         <main className="relative z-10">
-          <ExperienceSection />
+          <ExperienceSection id="experience-section" />
           <ProjectsSection />
         </main>
         

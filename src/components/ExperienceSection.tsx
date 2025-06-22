@@ -1,4 +1,3 @@
-
 import { Calendar, MapPin, Building, ChevronRight } from "lucide-react";
 
 const experiences = [
@@ -40,9 +39,13 @@ const experiences = [
   }
 ];
 
-const ExperienceSection = () => {
+interface ExperienceSectionProps {
+  id?: string;
+}
+
+const ExperienceSection: React.FC<ExperienceSectionProps> = ({ id }) => {
   return (
-    <section className="py-20 px-4 relative">
+    <section id={id} className="py-20 px-4 relative">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-20">
