@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -9,9 +9,28 @@ const Header = () => {
 
   return (
     <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-black to-red-900/20"></div>
+      {/* Animated background with orange glows */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-black to-red-900/20">
+        {/* Floating orange orbs with animation */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-orange-400/8 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-red-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        
+        {/* Moving light streaks */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/20 to-transparent animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-400/15 to-transparent animate-pulse delay-500"></div>
+        </div>
+      </div>
       
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `linear-gradient(rgba(255,107,53,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.1) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}></div>
+      </div>
+
       {/* Animated lines */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"></div>
@@ -20,8 +39,22 @@ const Header = () => {
         <div className="absolute right-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <div className="mb-12">
+          {/* Photo container */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="w-48 h-48 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/30 flex items-center justify-center backdrop-blur-sm">
+                {/* Photo placeholder - you can replace this with an actual image */}
+                <div className="w-44 h-44 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border border-orange-500/20 flex items-center justify-center">
+                  <span className="text-orange-400 text-6xl font-bold">FH</span>
+                </div>
+              </div>
+              {/* Glowing ring animation */}
+              <div className="absolute inset-0 rounded-full border-2 border-orange-500/50 animate-ping"></div>
+            </div>
+          </div>
+
           <h1 className="text-5xl md:text-7xl font-black tracking-wider mb-6 text-white">
             FABIÁN HUERVO
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
@@ -94,10 +127,18 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
+      {/* Futuristic scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-orange-500 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-orange-500 rounded-full mt-2 animate-pulse"></div>
+        <div className="relative">
+          {/* Outer ring */}
+          <div className="w-16 h-16 border border-orange-500/30 rounded-full flex items-center justify-center">
+            {/* Inner ring with glow */}
+            <div className="w-12 h-12 border border-orange-500/60 rounded-full flex items-center justify-center bg-orange-500/5 backdrop-blur-sm">
+              <ArrowDown className="w-6 h-6 text-orange-400 animate-pulse" />
+            </div>
+          </div>
+          {/* Animated ring */}
+          <div className="absolute inset-0 border border-orange-500/20 rounded-full animate-ping"></div>
         </div>
       </div>
     </header>
