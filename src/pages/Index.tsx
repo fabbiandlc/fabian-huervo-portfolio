@@ -2,10 +2,12 @@ import Header from "@/components/Header";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      <Analytics />
       <div className="relative">
         {/* Background pattern */}
         <div className="fixed inset-0 opacity-5">
