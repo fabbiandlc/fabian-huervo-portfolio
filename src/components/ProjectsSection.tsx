@@ -1,103 +1,148 @@
 
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Play } from "lucide-react";
 
 const projects = [
   {
     title: "Aplicación de Horarios Escolares",
-    description: "Aplicación móvil desarrollada durante mi residencia profesional para la generación automática de horarios escolares, optimizando la asignación de recursos educativos.",
-    technologies: ["React Native", "JavaScript", "SQL"],
+    subtitle: "MOBILE APPLICATION",
+    description: "Sistema avanzado de generación automática de horarios escolares con algoritmos de optimización para la asignación eficiente de recursos educativos.",
+    technologies: ["React Native", "JavaScript", "SQL", "Algoritmos"],
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "#",
+    featured: true
   },
   {
     title: "Sistema de Gestión ERP",
-    description: "Administración y optimización del sistema ERP para control de inventarios, gestión de proveedores y automatización de procesos empresariales.",
-    technologies: ["SQL", "Sistemas ERP", "Gestión de Inventarios"],
+    subtitle: "ENTERPRISE SOLUTION",
+    description: "Plataforma integral para la administración empresarial con módulos de inventario, proveedores y automatización de procesos críticos.",
+    technologies: ["SQL", "ERP Systems", "Business Intelligence"],
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "#",
+    featured: false
   },
   {
-    title: "Infraestructura de Red y Servidores",
-    description: "Implementación de cableado estructurado, configuración de switches/routers, administración de servidores virtuales y físicos en Data Center.",
-    technologies: ["Redes", "Virtualización", "Windows Server", "Linux"],
+    title: "Infraestructura de Red",
+    subtitle: "NETWORK ARCHITECTURE",
+    description: "Diseño e implementación de infraestructura de red empresarial con servidores virtualizados y sistemas de seguridad CCTV.",
+    technologies: ["Networking", "Virtualization", "Windows Server", "Linux"],
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "#",
+    featured: false
   },
   {
-    title: "Sistema de Control de Activos",
-    description: "Desarrollo de herramientas para la generación de reportes de inventario, control de activos tecnológicos y gestión de equipos institucionales.",
-    technologies: ["HTML", "CSS", "JavaScript", "Bases de Datos"],
+    title: "Control de Activos",
+    subtitle: "ASSET MANAGEMENT",
+    description: "Sistema de gestión y control de activos tecnológicos con reportería avanzada y seguimiento en tiempo real.",
+    technologies: ["JavaScript", "Database Design", "Reporting"],
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop",
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "#",
+    featured: false
   }
 ];
 
 const ProjectsSection = () => {
   return (
-    <section id="proyectos" className="py-12">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-          Proyectos Destacados
-        </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-600 mx-auto rounded-full"></div>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-          Una selección de proyectos que demuestran mis habilidades técnicas y experiencia profesional
-        </p>
-      </div>
+    <section className="py-20 px-4 relative">
+      <div className="max-w-7xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-wider">
+            PROYECTOS
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+              DESTACADOS
+            </span>
+          </h2>
+          <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mb-8"></div>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+            Portafolio de soluciones tecnológicas que demuestran experiencia en desarrollo, 
+            infraestructura y gestión de sistemas empresariales
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.03] border border-gray-100"
-          >
-            <div className="relative overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+        {/* Projects grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className={`group relative overflow-hidden rounded-2xl bg-gray-900/30 backdrop-blur-sm border border-gray-800 hover:border-orange-500/50 transition-all duration-700 ${
+                project.featured ? 'lg:col-span-2 lg:row-span-1' : ''
+              }`}
+            >
+              {/* Image container */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
+                    project.featured ? 'h-64 lg:h-80' : 'h-56'
+                  }`}
+                />
+                
+                {/* Image overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
+                
+                {/* Play button overlay */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                    <Play className="w-6 h-6 text-black ml-1" fill="currentColor" />
+                  </div>
+                </div>
+                
+                {/* Project number */}
+                <div className="absolute top-4 right-4 w-12 h-12 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center border border-orange-500/30">
+                  <span className="text-orange-400 font-bold">{(index + 1).toString().padStart(2, '0')}</span>
+                </div>
+              </div>
 
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">{project.title}</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+              {/* Content */}
+              <div className="p-8">
+                <div className="mb-4">
+                  <p className="text-orange-400 text-xs font-bold tracking-widest uppercase mb-2">{project.subtitle}</p>
+                  <h3 className="text-2xl font-black text-white mb-3 group-hover:text-orange-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                    {project.description}
+                  </p>
+                </div>
 
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium"
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 bg-black/50 border border-gray-700 text-orange-400 text-xs font-semibold rounded-full hover:border-orange-500/50 transition-colors"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Action buttons */}
+                <div className="flex gap-4">
+                  <a
+                    href={project.demoUrl}
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-black rounded-lg font-bold hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:scale-105"
                   >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex gap-3">
-                <a
-                  href={project.demoUrl}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Ver Demo
-                </a>
-                <a
-                  href={project.githubUrl}
-                  className="flex items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
-                >
-                  <Github className="w-4 h-4" />
-                  Código
-                </a>
+                    <ExternalLink className="w-4 h-4" />
+                    EXPLORAR
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    className="flex items-center gap-2 px-6 py-3 border border-gray-600 text-gray-300 rounded-lg font-bold hover:border-orange-500 hover:text-white transition-all duration-300 hover:bg-orange-500/10"
+                  >
+                    <Github className="w-4 h-4" />
+                    CÓDIGO
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
