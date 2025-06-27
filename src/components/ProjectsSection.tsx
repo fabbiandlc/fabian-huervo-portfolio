@@ -5,7 +5,7 @@ const projects = [
     title: "Aplicación de Horarios Escolares",
     subtitle: "MOBILE APPLICATION",
     description: "Sistema avanzado de generación automática de horarios escolares con algoritmos de optimización para la asignación eficiente de recursos educativos.",
-    technologies: ["React Native", "TypeScript", "Expo", "SQL", "Algoritmos"],
+    technologies: ["React Native", "TypeScript", "Expo", "SQL"],
     image: "https://api.microlink.io/?url=https://gestioncobaev.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
     demoUrl: "https://gestioncobaev.vercel.app/",
     githubUrl: "https://github.com/fabbiandlc/gestion",
@@ -53,13 +53,6 @@ const ProjectsSection = () => {
                 
                 {/* Image overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
-                
-                {/* Play button overlay */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                    <Play className="w-6 h-6 text-black ml-1" fill="currentColor" />
-                  </div>
-                </div>
                 
                 {/* Project number */}
                 <div className="absolute top-4 right-4 w-12 h-12 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center border border-orange-500/30">

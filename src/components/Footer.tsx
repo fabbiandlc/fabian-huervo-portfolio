@@ -44,11 +44,11 @@ const Footer = () => {
             <div className="space-y-3">
               {[
                 "Desarrollo de Aplicaciones",
+                "Desarrollo de Páginas Web",
                 "Administración de Redes",
                 "Gestión de Servidores",
                 "Soporte Técnico",
                 "Bases de Datos",
-                "Sistemas ERP"
               ].map((skill, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
