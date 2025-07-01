@@ -98,6 +98,8 @@ const ProjectsSection = () => {
                 <div className="flex gap-4">
                   <a
                     href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-black rounded-lg font-bold hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:scale-105"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -105,6 +107,8 @@ const ProjectsSection = () => {
                   </a>
                   <a
                     href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-6 py-3 border border-gray-600 text-gray-300 rounded-lg font-bold hover:border-orange-500 hover:text-white transition-all duration-300 hover:bg-orange-500/10"
                   >
                     <Github className="w-4 h-4" />
