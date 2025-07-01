@@ -62,7 +62,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-black text-white tracking-wider">COLABOREMOS</h3>
             <p className="text-gray-400 leading-relaxed">
-              ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte a llevarlo al siguiente nivel.
+              ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte.
             </p>
             <a
               href="mailto:fahuervodelacruz@hotmail.com"
