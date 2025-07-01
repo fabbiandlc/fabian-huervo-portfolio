@@ -10,6 +10,16 @@ const projects = [
     demoUrl: "https://gestioncobaev.vercel.app/",
     githubUrl: "https://github.com/fabbiandlc/gestion",
     featured: true
+  },
+  {
+    title: "Página web de gestión de un consultorio odontológico",
+    subtitle: "CRM SYSTEM",
+    description: "Sistema de gestión de un consultorio odontológico, con funcionalidades para la gestión de pacientes, citas, tratamientos, etc.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Supabase", "Vercel"],
+    image: "public/proyecto-2.webp",
+    demoUrl: "https://sistemaodontologicodemo.vercel.app/",
+    githubUrl: "https://github.com/fabbiandlc/sistema-consultorio-preview",
+    featured: true
   }
 ];
 
