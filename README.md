@@ -2,10 +2,12 @@
 
 ## 📋 Descripción
 
-Portfolio personal desarrollado con React, TypeScript y Tailwind CSS. Este proyecto presenta mi experiencia profesional, proyectos destacados y habilidades técnicas de manera elegante y moderna.
+Portfolio personal desarrollado con React, TypeScript y Tailwind CSS. Este proyecto presenta mi experiencia profesional, proyectos destacados y habilidades técnicas de manera elegante y moderna. Incluye optimización SEO con meta-etiquetas personalizadas y gestión dinámica de títulos y descripciones usando react-helmet-async.
 
 ## 🚀 Características
 
+- **SEO Mejorado**: Meta-etiquetas personalizadas, Open Graph y Twitter Card optimizadas, idioma español, y gestión dinámica con react-helmet-async.
+- **Accesibilidad**: Imágenes con atributos alt descriptivos y estructura semántica mejorada.
 - **Diseño Responsivo**: Optimizado para dispositivos móviles, tablets y desktop
 - **Interfaz Moderna**: Utiliza componentes de shadcn/ui para una experiencia visual atractiva
 - **Navegación Suave**: Transiciones fluidas entre secciones

@@ -45,7 +45,7 @@ const Header = () => {
               <div className="w-32 h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/30 flex items-center justify-center backdrop-blur-sm">
                 {/* Foto o iniciales */}
                 <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border border-orange-500/20 flex items-center justify-center">
-                  <span className="text-orange-400 text-4xl md:text-5xl font-bold">FH</span>
+                  <span className="text-orange-400 text-4xl md:text-5xl font-bold" aria-label="Avatar de Fabián Huervo De La Cruz">FH</span>
                 </div>
               </div>
             </div>

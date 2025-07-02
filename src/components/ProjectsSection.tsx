@@ -55,7 +55,7 @@ const ProjectsSection = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`Imagen del proyecto ${project.title}`}
                   loading="lazy"
                   className={`w-full object-cover ${
                     project.featured ? 'h-64 lg:h-80' : 'h-56'
