@@ -1,9 +1,11 @@
-import Header from "@/components/Header";
-import ExperienceSection from "@/components/ExperienceSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import Footer from "@/components/Footer";
+import { Suspense, lazy } from "react";
 import { Analytics } from "@vercel/analytics/react"
 import { Helmet, HelmetProvider } from "react-helmet-async";
+
+const Header = lazy(() => import("@/components/Header"));
+const ExperienceSection = lazy(() => import("@/components/ExperienceSection"));
+const ProjectsSection = lazy(() => import("@/components/ProjectsSection"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   return (
@@ -35,14 +37,14 @@ const Index = () => {
               }}></div>
             </div>
             
-            <Header />
-            
-            <main className="relative z-10">
-              <ExperienceSection id="experience-section" />
-              <ProjectsSection />
-            </main>
-            
-            <Footer />
+            <Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center text-gray-400">Cargando contenido...</div>}>
+              <Header />
+              <main className="relative z-10">
+                <ExperienceSection id="experience-section" />
+                <ProjectsSection />
+              </main>
+              <Footer />
+            </Suspense>
           </div>
         </div>
       </>
