@@ -41,15 +41,11 @@ const Header = () => {
         <div className="w-full flex flex-col items-center justify-center mb-8 md:mb-10">
           {/* Contenedor de la foto */}
           <div className="mb-6 flex justify-center w-full">
-            <div className="relative flex items-center justify-center">
-              <div className="aspect-[1014/1309] w-28 md:w-40 bg-gradient-to-br from-orange-500/20 to-red-500/20 border-8 border-orange-500/30 flex items-center justify-center backdrop-blur-sm overflow-hidden">
-                <img
-                  src="/foto-de-perfil.webp"
-                  alt="Foto de perfil de Fabián Huervo De La Cruz"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            <img
+              src="/foto-de-perfil.webp"
+              alt="Foto de perfil de Fabián Huervo De La Cruz"
+              className="w-28 md:w-40 aspect-[1014/1309] object-cover rounded-md"
+            />
           </div>
 
           <div className="inline-block mb-6">
