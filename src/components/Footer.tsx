@@ -33,7 +33,7 @@ const Footer = () => {
                 <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-black" />
                 </div>
-                <span className="text-gray-300">Veracruz, México</span>
+                <span className="text-gray-300">Jáltipan de Morelos, Veracruz, México</span>
               </div>
             </div>
           </div>
