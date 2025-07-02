@@ -6,7 +6,7 @@ const projects = [
     subtitle: "MOBILE APPLICATION",
     description: "Sistema avanzado de generación automática de horarios escolares con algoritmos de optimización para la asignación eficiente de recursos educativos.",
     technologies: ["React Native", "TypeScript", "Expo", "SQL"],
-    image: "https://api.microlink.io/?url=https://gestioncobaev.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
+    image: "/proyecto-1.webp",
     demoUrl: "https://gestioncobaev.vercel.app/",
     githubUrl: "https://github.com/fabbiandlc/gestion",
     featured: true
@@ -47,7 +47,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-2xl bg-gray-900/30 backdrop-blur-sm border border-gray-800 hover:border-orange-500/50 transition-all duration-700 ${
+              className={`group relative overflow-hidden rounded-2xl bg-gray-900/30 backdrop-blur-sm border border-gray-800 ${
                 project.featured ? 'lg:col-span-2 lg:row-span-1' : ''
               }`}
             >
@@ -56,13 +56,14 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
+                  loading="lazy"
+                  className={`w-full object-cover ${
                     project.featured ? 'h-64 lg:h-80' : 'h-56'
                   }`}
                 />
                 
                 {/* Image overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80"></div>
                 
                 {/* Project number */}
                 <div className="absolute top-4 right-4 w-12 h-12 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center border border-orange-500/30">
@@ -74,10 +75,10 @@ const ProjectsSection = () => {
               <div className="p-8">
                 <div className="mb-4">
                   <p className="text-orange-400 text-xs font-bold tracking-widest uppercase mb-2">{project.subtitle}</p>
-                  <h3 className="text-2xl font-black text-white mb-3 group-hover:text-orange-400 transition-colors">
+                  <h3 className="text-2xl font-black text-white mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  <p className="text-gray-400 leading-relaxed">
                     {project.description}
                   </p>
                 </div>
@@ -87,7 +88,7 @@ const ProjectsSection = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-black/50 border border-gray-700 text-orange-400 text-xs font-semibold rounded-full hover:border-orange-500/50 transition-colors"
+                      className="px-3 py-1 bg-black/50 border border-gray-700 text-orange-400 text-xs font-semibold rounded-full"
                     >
                       {tech}
                     </span>
@@ -100,7 +101,7 @@ const ProjectsSection = () => {
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-black rounded-lg font-bold hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:scale-105"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-black rounded-lg font-bold"
                   >
                     <ExternalLink className="w-4 h-4" />
                     EXPLORAR
@@ -109,7 +110,7 @@ const ProjectsSection = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 border border-gray-600 text-gray-300 rounded-lg font-bold hover:border-orange-500 hover:text-white transition-all duration-300 hover:bg-orange-500/10"
+                    className="flex items-center gap-2 px-6 py-3 border border-gray-600 text-gray-300 rounded-lg font-bold"
                   >
                     <Github className="w-4 h-4" />
                     CÓDIGO
