@@ -29,45 +29,38 @@ const Header = () => {
           backgroundSize: '50px 50px'
         }}></div>
       </div>
-      {/* Líneas decorativas */}
-      <div className="absolute inset-0 pointer-events-none select-none">
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"></div>
-        <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
-        <div className="absolute left-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-orange-500/20 to-transparent"></div>
-        <div className="absolute right-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
-      </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center px-2 md:px-8 max-w-2xl mx-auto">
-        <div className="w-full flex flex-col items-center justify-center mb-8 md:mb-10">
-          {/* Contenedor de la foto */}
-          <div className="mb-6 flex justify-center w-full">
+        {/* Fila: foto y nombre/título */}
+        <div className="flex flex-col md:flex-row items-center justify-center w-full">
+          {/* Foto a la izquierda */}
+          <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-10 flex flex-col items-center w-full md:w-auto">
             <img
               src="/foto-de-perfil.webp"
               alt="Foto de perfil de Fabián Huervo De La Cruz"
               className="w-28 md:w-40 aspect-[1014/1309] object-cover rounded-md"
             />
+            {/* Línea decorativa debajo de la imagen en mobile */}
+            <div className="h-1 w-full bg-gradient-to-r from-orange-500 to-red-500 mt-4 md:hidden"></div>
           </div>
-
-          <div className="inline-block mb-6">
-            <h1 className="text-3xl md:text-4xl font-black tracking-wider mb-4 text-white">
-              FABIÁN HUERVO
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500 text-2xl md:text-3xl">
-                DE LA CRUZ
-              </span>
+          {/* Nombre y título a la derecha */}
+          <div className="flex flex-col items-center md:items-start w-full">
+            <h1 className="text-3xl md:text-4xl font-black tracking-wider mb-2 text-white text-center md:text-left">
+              FABIÁN HUERVO DE LA CRUZ
             </h1>
-            <div className="h-1 w-full bg-gradient-to-r from-orange-500 to-red-500"></div>
-          </div>
-          
-          <p className="text-base md:text-lg font-semibold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500 mb-6 w-full">
-            INGENIERO EN SISTEMAS COMPUTACIONALES
-          </p>
-          {/* Resumen breve */}
-          <div className="max-w-xl mx-auto mb-8 w-full">
-            <p className="text-sm md:text-base text-gray-400 leading-relaxed">
-              Desarrollador de aplicaciones móviles y páginas web con 6 meses de experiencia en React Native, React, Javascript, y automatización IA.
-              Con dominio en administración de redes y gestión de servidores.
+            <p className="text-base md:text-lg font-semibold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500 mb-2 w-full text-center md:text-left">
+              INGENIERO EN SISTEMAS COMPUTACIONALES
             </p>
+            {/* Línea decorativa debajo del bloque principal en desktop */}
+            <div className="h-1 w-full bg-gradient-to-r from-orange-500 to-red-500 mt-4 hidden md:block"></div>
           </div>
+        </div>
+        {/* Resumen y botón de contacto siempre centrados debajo de la línea */}
+        <div className="max-w-xl mx-auto mb-8 w-full mt-10 flex flex-col items-center justify-center">
+          <p className="text-base md:text-lg text-gray-400 leading-relaxed text-center mb-6">
+            Desarrollador de aplicaciones móviles y páginas web con 6 meses de experiencia en React Native, React, Javascript, y Node.js.
+          
+          </p>
           {/* Botón de contacto */}
           <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
             <DialogTrigger asChild>
