@@ -3,7 +3,7 @@ import { ExternalLink, Github, Play } from "lucide-react";
 const projects = [
   {
     title: "Aplicación de Horarios Escolares",
-    subtitle: "MOBILE APPLICATION",
+    subtitle: "Aplicación móvil",
     description: "Sistema avanzado de generación automática de horarios escolares con algoritmos de optimización para la asignación eficiente de recursos educativos.",
     technologies: ["React Native", "TypeScript", "Expo", "SQL"],
     image: "/proyecto-1.webp",
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Página web de gestión de un consultorio odontológico",
-    subtitle: "CRM SYSTEM",
+    subtitle: "Sistema CRM",
     description: "Sistema de gestión de un consultorio odontológico, con funcionalidades para la gestión de pacientes, citas, tratamientos, etc.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Supabase", "Vercel"],
     image: "/proyecto-2.webp",

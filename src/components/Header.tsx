@@ -75,8 +75,8 @@ const Header = () => {
             {/* Botón de contacto */}
             <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
               <DialogTrigger asChild>
-                <Button className="px-6 py-3 text-base font-bold bg-gradient-to-r from-orange-500 to-red-500 text-black hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:scale-105 rounded-lg">
-                  CONTÁCTAME
+                <Button className="px-6 py-3 text-base font-medium bg-gradient-to-r from-orange-500 to-red-500 text-black hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:scale-105 rounded-lg">
+                  Contáctame
                 </Button>
               </DialogTrigger>
               <DialogContent className="bg-black/95 border border-gray-800 text-white max-w-md">
@@ -123,10 +123,10 @@ const Header = () => {
             {/* Botón de descargar CV */}
             <Button 
               onClick={handleDownloadCV}
-              className="px-6 py-3 text-base font-bold border border-gray-600 text-gray-300 hover:border-orange-500/50 hover:text-white transition-all duration-300 hover:scale-105 rounded-lg flex items-center gap-2"
+              className="px-6 py-3 text-base font-medium border border-gray-600 text-gray-300 hover:border-orange-500/50 hover:text-white transition-all duration-300 hover:scale-105 rounded-lg flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
-              DESCARGAR CV
+              Descargar CV
             </Button>
           </div>
         </div>
