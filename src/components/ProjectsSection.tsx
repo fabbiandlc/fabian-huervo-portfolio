@@ -26,7 +26,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section className="py-20 px-4 relative">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-wider">
@@ -104,7 +104,7 @@ const ProjectsSection = () => {
                     className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-black rounded-lg font-bold"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    EXPLORAR
+                    VISITAR
                   </a>
                   <a
                     href={project.githubUrl}

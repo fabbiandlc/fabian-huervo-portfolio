@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, ArrowDown } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowDown, Download } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -16,6 +16,17 @@ const Header = () => {
         block: 'start'
       });
     }
+  };
+
+  const handleDownloadCV = () => {
+    // Aquí puedes agregar la lógica para descargar el CV
+    // Por ejemplo, abrir un enlace a un archivo PDF
+    const link = document.createElement('a');
+    link.href = '/CV FABIÁN HUERVO DE LA CRUZ.pdf'; // Asegúrate de tener el archivo en la carpeta public
+    link.download = 'CV-Fabian-Huervo.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -53,59 +64,71 @@ const Header = () => {
             <div className="h-1 w-full bg-gradient-to-r from-orange-500 to-red-500 mt-4 hidden md:block"></div>
           </div>
         </div>
-        {/* Resumen y botón de contacto siempre centrados debajo de la línea */}
+        {/* Resumen y botones siempre centrados debajo de la línea */}
         <div className="max-w-xl mx-auto mb-8 w-full mt-10 flex flex-col items-center justify-center">
           <p className="text-base md:text-lg text-gray-400 leading-relaxed text-center mb-6">
             Desarrollador de aplicaciones móviles y páginas web con 6 meses de experiencia en React Native, React, Javascript, y Node.js.
           
           </p>
-          {/* Botón de contacto */}
-          <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-            <DialogTrigger asChild>
-              <Button className="px-6 py-3 text-base font-bold bg-gradient-to-r from-orange-500 to-red-500 text-black hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:scale-105 rounded-lg">
-                CONTÁCTAME
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="bg-black/95 border border-gray-800 text-white max-w-md">
-              <DialogHeader>
-                <DialogTitle className="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
-                  CONTACTO
-                </DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4 pt-2">
-                <div className="group cursor-pointer">
-                  <div className="flex items-center gap-3 p-3 border border-gray-800 rounded-lg bg-black/30 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 hover:bg-black/50">
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Mail className="w-4 h-4 text-black" />
+          {/* Botones */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            {/* Botón de contacto */}
+            <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+              <DialogTrigger asChild>
+                <Button className="px-6 py-3 text-base font-bold bg-gradient-to-r from-orange-500 to-red-500 text-black hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:scale-105 rounded-lg">
+                  CONTÁCTAME
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="bg-black/95 border border-gray-800 text-white max-w-md">
+                <DialogHeader>
+                  <DialogTitle className="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                    CONTACTO
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="space-y-4 pt-2">
+                  <div className="group cursor-pointer">
+                    <div className="flex items-center gap-3 p-3 border border-gray-800 rounded-lg bg-black/30 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 hover:bg-black/50">
+                      <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Mail className="w-4 h-4 text-black" />
+                      </div>
+                      <a 
+                        href="mailto:fahuervodelacruz@hotmail.com" 
+                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                        onClick={() => setIsModalOpen(false)}
+                      >
+                        fahuervodelacruz@hotmail.com
+                      </a>
                     </div>
-                    <a 
-                      href="mailto:fahuervodelacruz@hotmail.com" 
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                      onClick={() => setIsModalOpen(false)}
-                    >
-                      fahuervodelacruz@hotmail.com
-                    </a>
+                  </div>
+                  <div className="group cursor-pointer">
+                    <div className="flex items-center gap-3 p-3 border border-gray-800 rounded-lg bg-black/30 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 hover:bg-black/50">
+                      <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Phone className="w-4 h-4 text-black" />
+                      </div>
+                      <span className="text-gray-300 text-sm">+52 922 197 3362</span>
+                    </div>
+                  </div>
+                  <div className="group">
+                    <div className="flex items-center gap-3 p-3 border border-gray-800 rounded-lg bg-black/30 backdrop-blur-sm">
+                      <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                        <MapPin className="w-4 h-4 text-black" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Jáltipan de Morelos, Veracruz, México</span>
+                    </div>
                   </div>
                 </div>
-                <div className="group cursor-pointer">
-                  <div className="flex items-center gap-3 p-3 border border-gray-800 rounded-lg bg-black/30 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 hover:bg-black/50">
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Phone className="w-4 h-4 text-black" />
-                    </div>
-                    <span className="text-gray-300 text-sm">+52 922 197 3362</span>
-                  </div>
-                </div>
-                <div className="group">
-                  <div className="flex items-center gap-3 p-3 border border-gray-800 rounded-lg bg-black/30 backdrop-blur-sm">
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-4 h-4 text-black" />
-                    </div>
-                    <span className="text-gray-300 text-sm">Jáltipan de Morelos, Veracruz, México</span>
-                  </div>
-                </div>
-              </div>
-            </DialogContent>
-          </Dialog>
+              </DialogContent>
+            </Dialog>
+
+            {/* Botón de descargar CV */}
+            <Button 
+              onClick={handleDownloadCV}
+              className="px-6 py-3 text-base font-bold border border-gray-600 text-gray-300 hover:border-orange-500/50 hover:text-white transition-all duration-300 hover:scale-105 rounded-lg flex items-center gap-2"
+            >
+              <Download className="w-4 h-4" />
+              DESCARGAR CV
+            </Button>
+          </div>
         </div>
       </div>
       {/* Indicador de scroll más pequeño */}
