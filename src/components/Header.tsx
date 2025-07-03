@@ -20,8 +20,6 @@ const Header = () => {
 
   return (
     <header className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-8 px-2 md:px-8">
-      {/* Fondo degradado simple sin animaciones */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-black to-red-900/20"></div>
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
         <div className="absolute inset-0" style={{
