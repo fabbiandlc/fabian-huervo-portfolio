@@ -67,7 +67,7 @@ const Header = () => {
         {/* Resumen y botones siempre centrados debajo de la línea */}
         <div className="max-w-xl mx-auto mb-8 w-full mt-10 flex flex-col items-center justify-center">
           <p className="text-base md:text-lg text-gray-400 leading-relaxed text-center mb-6">
-            Desarrollador de aplicaciones móviles y páginas web con 6 meses de experiencia en React Native, React, Javascript, y Node.js.
+            Desarrollador de aplicaciones móviles y páginas web con 1 año de experiencia en React Native, React, Javascript, y Node.js.
           
           </p>
           {/* Botones */}
