@@ -12,6 +12,16 @@ const projects = [
     featured: true
   },
   {
+    title: "Página web estilo Chat GPT",
+    subtitle: "Chatbot de IA",
+    description: "Página web estilo Chat GPT, con IA para generar respuestas a preguntas.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Vercel", "OpenRouter"],
+    image: "/proyecto-3.webp",
+    demoUrl: "https://chat-ia-ejemplo.vercel.app/",
+    githubUrl: "https://github.com/fabbiandlc/Chat_IA",
+    featured: true
+  },
+  {
     title: "Página web de gestión de un consultorio odontológico",
     subtitle: "Sistema CRM",
     description: "Sistema de gestión de un consultorio odontológico, con funcionalidades para la gestión de pacientes, citas, tratamientos, etc.",
