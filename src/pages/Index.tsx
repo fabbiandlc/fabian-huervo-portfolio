@@ -14,6 +14,7 @@ const Index = () => {
         <Helmet>
           <title>Fabián Huervo De La Cruz | Ingeniero en Sistemas Computacionales</title>
           <meta name="description" content="Portafolio profesional de Fabián Huervo De La Cruz, Ingeniero en Sistemas Computacionales. Experiencia en desarrollo web, móvil, administración de redes y servidores." />
+         <meta name="google-site-verification" content="gisvqLxHG2GlVPyktUIdw9ybUuxSGQ-pwotoApMqNgg" />
           <meta property="og:title" content="Fabián Huervo De La Cruz | Ingeniero en Sistemas Computacionales" />
           <meta property="og:description" content="Portafolio profesional de Fabián Huervo De La Cruz, Ingeniero en Sistemas Computacionales. Proyectos destacados y experiencia en tecnología." />
           <meta property="og:type" content="website" />
